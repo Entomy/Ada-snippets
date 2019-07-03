@@ -1,0 +1,50 @@
+{
+	"Case": {
+		"prefix": "case",
+		"scope": "gpr",
+		"body": [
+			"case ${1:Variable} is",
+			"\twhen \"${3:Condition}\" =>",
+			"\t\t$0",
+			"\twhen others =>",
+			"\t\t$2",
+			"end case;"
+		],
+		"description": "Case statement"
+	},
+	"Package": {
+		"prefix": "package",
+		"scope": "gpr",
+		"body": [
+			"package ${1|Binder,Builder,Check,Clean,Compiler,Cross_Reference,Documentation,Eliminate,Finder,Gnatls,Gnatstub,IDE,Install,Linker,Metrics,Naming,Pretty_Printer,Remote,Stack,Synchronize|} is",
+			"\t$0",
+			"end $1;"
+		],
+		"description": "Package declaration"
+	},
+	"Package-Extension": {
+		"prefix": "package-extension",
+		"scope": "gpr",
+		"body": [
+			"package ${1:Name} extends ${2|Binder,Builder,Check,Clean,Compiler,Cross_Reference,Documentation,Eliminate,Finder,Gnatls,Gnatstub,IDE,Install,Linker,Metrics,Naming,Pretty_Printer,Remote,Stack,Synchronize|} is",
+			"\t$0",
+			"end $1;"	
+		],
+		"description": "Package extension declaration"
+	},
+	"Project": {
+		"prefix": "project",
+		"scope": "gpr",
+		"body": [
+			"project ${1:Name} is",
+			"",
+			"\tfor Source_Dirs use (\"${2:Source Directory}\");",
+			"\tfor Object_Dir use \"${3:Object Directory}\";",
+			"",
+			"\t$0",
+			"",
+			"end ${1:Name};"
+		],
+		"description": "Project specification"
+	}
+}

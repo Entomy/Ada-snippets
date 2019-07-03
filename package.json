@@ -1,0 +1,44 @@
+{
+    "name": "ada-snippets",
+    "displayName": "Ada-snippets",
+    "description": "Provides snippets for Ada",
+    "version": "0.0.2",
+    "publisher": "Entomy",
+    "author": "Entomy",
+    "galleryBanner": {
+        "color": "#AAAAAA",
+        "theme": "light"
+    },
+    "preview": true,
+    "keywords": [
+      "ada",
+      "adb",
+      "ads",
+      "gpr"  
+    ],
+    "license": "LICENSE",
+    "repository": {
+        
+    },
+    "bugs": {
+        
+    },
+    "engines": {
+        "vscode": "^1.35.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "ada",
+                "path": "./snippets/ada.json"
+            },
+            {
+                "language": "gpr",
+                "path": "./snippets/gpr.json"
+            }
+        ]
+    }
+}

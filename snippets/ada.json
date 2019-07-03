@@ -1,0 +1,361 @@
+{
+	"Aspect": {
+		"prefix": "aspect",
+		"scope": "ada",
+		"body": [
+			"with ${1|Ada_2005,Ada_2012,Address,Alignment,All_Calls_Remote,Asynchronous,Atomic,Atomic_Components,Attach_Handler,Bit_Order,Component_Size,Constant_Indexing,Convention,CPU,Default_Component_Value,Default_Iterator,Default_Storage_Pool,Default_Value,Dispatching_Domain,Dynamic_Predicate,Elaborate_Body,Export,External_Name,External_Tag,Favor_Top_Level,Implicit_Dereference,Import,Independent,Independent_Components,Inline,Inline_Always,Input,Interrupt_Handler,Interrupt_Priority,Iterator_Element,Link_Name,Machine_Radix,No_Return,Object_Size,Output,Pack,Persistent_BSS,Post,Pre,Preelaborate,Priority,Pure,Pure_Function,Read,Relative_Deadline,Remote_Access_Type,Remote_Call_Interface,Remote_Types,Shared,Shared_Passive,Size,Small,Static_Predicate,Storage_Pool,Storage_Size,Stream_Size,Suppress_Debug_Info,Synchronization,Test_Case,Type_Invariant,Unchecked_Union,Universal_Aliasing,Unmodified,Unreferenced,Unreferenced_Objects,Value_Size,Variable_Indexing,Volatile,Volatile_Components,Warnings,Write|}"
+		],
+		"description": "Aspect specification"
+	},
+	"Case": {
+		"prefix": "case",
+		"scope": "ada",
+		"body": [
+			"case ${1:Variable} is",
+			"\twhen ${3:Condition} =>",
+			"\t\t$0",
+			"\twhen others =>",
+			"\t\t$2",
+			"end case;"
+		],
+		"description": "Case statement"
+	},
+	"Declare": {
+		"prefix": "declare",
+		"scope": "ada",
+		"body": [
+			"declare",
+			"\t$1",
+			"begin",
+			"\t$0",
+			"end;"	
+		],
+		"description": "Declare block statement"
+	},
+	"Elsif": {
+		"prefix": "elsif",
+		"scope": "ada",
+		"body": [
+			"elsif ${1:Condition} then",
+			"\t$0"
+		],
+		"description": "Elsif statement"
+	},
+	"Exit": {
+		"prefix": "exit",
+		"scope":"ada",
+		"body": [
+			"exit ${1:Loop Name};"	
+		],
+		"description": "Exit statement"
+	},
+	"Exit When": {
+		"prefix": "exit-when",
+		"scope": "ada",
+		"body": [
+			"exit ${1:Loop Name} when ${2:Condition};"
+		],
+		"description": "Exit when statement"
+	},
+	"For In Loop": {
+		"prefix": "for",
+		"scope": "ada",
+		"body": [
+			"for ${1:Identifier} ${2|in,in reverse|} ${3:Range} loop",
+			"\t$0",
+			"end loop;"
+		],
+		"description": "For-loop statement"
+	},
+	"For Of Loop": {
+		"prefix": "for-of",
+		"scope": "ada",
+		"body": [
+			"for ${1:Identifier} ${2|of,of reverse|} ${3:Container} loop",
+			"\t$0",
+			"end loop;"
+		],
+		"description": "For-of statement"
+	},
+	"Function Body": {
+		"prefix": "function-body",
+		"scope": "ada",
+		"body": [
+			"function ${1:Name} return ${2:Return_Type} is",
+			"\t$3",
+			"begin",
+			"\t0",
+			"end ${1:Name};"
+		],
+		"description": "Function body"
+	},
+	"Function Spec": {
+		"prefix": "function-spec",
+		"scope": "ada",
+		"body": [
+			"function ${1:Name} return ${2:Return_Type};"
+		],
+		"description": "Function declaration"
+	},
+	"Generic": {
+		"prefix": "generic",
+		"scope": "ada",
+		"body": [
+			"generic",
+			"\t$1",
+			"$0"
+		],
+		"description": "Generic declaration"
+	},
+	"If": {
+		"prefix": "if",
+		"scope": "ada",
+		"body": [
+			"if ${1:Condition} then",
+			"\t$0",
+			"end if;"
+		],
+		"description": "If statement"
+	},
+	"Interface": {
+		"prefix": "interface",
+		"scope": "ada",
+		"body": [
+			"type ${1:Name} is ${2|interface,limited interface,synchronized interface,task interface,protected interface|};"
+		],
+		"description": "Interface declaration"
+	},
+	"Loop": {
+		"prefix": "loop",
+		"scope": "ada",
+		"body": [
+			"loop",
+			"\t$0",
+			"end loop;"
+		],
+		"description": "Loop statement"
+	},
+	"Operator Body": {
+		"prefix": "operator-body",
+		"scope": "ada",
+		"body": [
+			"function \"${1|and,or,xor,=,<,<=,>,>=,+,-,&,*,/,mod,rem,**,not,abs|}\"($2) return ${3:Return_Type} is",
+			"\t$2",
+			"begin",
+			"\t$0",
+			"end ${1:Name};"
+		],
+		"description": "Operator body"
+	},
+	"Operator Spec": {
+		"prefix": "operator-spec",
+		"scope": "ada",
+		"body": [
+			"function \"${1|and,or,xor,=,<,<=,>,>=,+,-,&,*,/,mod,rem,**,not,abs|}\"($2) return ${3:Return_Type};"
+		],
+		"description": "Operator declaration"
+	},
+	"Package Spec": {
+		"prefix": "package-spec",
+		"scope": "ada",
+		"body": [
+			"package ${1:Name} is",
+			"\t$0",
+			"private",
+			"\t",
+			"end ${1:Name};"
+		],
+		"description": "Package specification"
+	},
+	"Package Body": {
+		"prefix": "package-body",
+		"scope": "ada",
+		"body": [
+			"package body ${1:Name} is",
+			"\t$0",
+			"end ${1:Name};"
+		],
+		"description": "Package body"
+	},
+	"Pragma": {
+		"prefix": "pragma",
+		"scope": "ada",
+		"body": [
+			"pragma ${1|Abort_Defer,Ada_83,Ada_95,Ada_2005,Ada_2012,All_Calls_Remote,Annotate,Assert,Assertion_Policy,Assume_No_Invalid_Values,Ast_Entry,Canonical_Streams,Check,Check_Name,Check_Policy,Comment,Common_Object,Compile_Time_Error,Compile_Time_Warning,Complete_Representation,Complex_Representation,Component_Alignment,Convention_Identifier,CPP_Class,CPP_Constructor,CPP_Virtual,CPP_VTable,CPU,C_Pass_By_Copy,Debug,Debug_Policy,Default_Storage_Pool,Detect_Blocking,Discard_Names,Dispatching_Domain,Elaborate,Elaborate_All,Elaborate_Body,Elaboration_Checks,Eliminate,Export_Exception,Export_Function,Export_Object,Export_PRocedure,Export_Value,Export_Valued_Procedure,Extend_System,Extensions_Allowed,External,External_Name_Casing,Fast_Math,Favor_Top_Level,Finalize_Storage_Only,Float_Representation,Ident,Implemented,Implicit_Packing,Import_Exception,Import_Function,Import_Object,Import_Procedure,Import_Valued_Procedure,Independent,Independent_Component,Initialize_Scalars,Inline_Always,Inline_Generic,Inspection_Point,Interface_Name,Interrupt_State,Invariant,Keep_Names,License,Linker_Alias,Linker_Constructor,Linker_Destructor,Linker_Options,Linker_Section,Link_With,List,Locking_Policy,Long_Float,Machine_Attribute,Main,Main_Storage,Normalize_Scalars,No_Body,No_StricT_Aliasing,Obsolescent,Optimize,Optimize_Alignment,Ordered,Page,Partition_Elaboration_Policy,Passive,Persistent_BSS,Polling,Postcondition,Precondition,Preelaborate,Priority_Specific_Dispatching,Profile,Profile_Warnings,Propagate_Exceptions,Psect_Object,Pure,Pure_Function,Queueing_Policy,Relative_Deadline,Remote_Call_Interface,Remote_Types,Restrictions,Restriction_Warnings,Reviewable,Shared_Passive,Share_Generic,Short_Circuit_And_Or,Short_Descriptors,Simple_Storage_Pool_Type,Source_File_Name,Source_File_Name_Project,Source_Reference,Static_Elaboration_Desired,Storage_Size,Stream_Convert,Style_Checks,Subtitle,Suppress,Suppress_All,Suppress_Exception_Locations,Suppress_Initialization,Task_Dispatching_Policy,Task_Info,Task_Name,Task_Storage,Test_Case,Thread_Body,Thread_Local_Storage,Time_Slice,Title,Unchecked_Union,Unimplemented_Unit,Universal_Aliasing,Universal_Data,Unmodified,Unreferenced,Unreferenced_Objects,Unreserve_All_Interrupts,Unsuppress,Use_VADS_Size,Validity_Checks,Volatile,Volatile_Components,Warnings,Weak_External,Wide_Character_Encoding|}$0;"
+		],
+		"description": "Pragma statement"
+	},
+	"Procedure Body": {
+		"prefix": "procedure-body",
+		"scope": "ada",
+		"body": [
+			"procedure ${1:Name} is",
+			"\t$2",
+			"begin",
+			"\t$0",
+			"end ${1:Name};"
+		],
+		"description": "Procedure body"
+	},
+	"Procedure Spec": {
+		"prefix": "procedure-spec",
+		"scope": "ada",
+		"body": [
+			"procedure ${1:Name};"
+		],
+		"description": "Procedure declaration"
+	},
+	"Protected": {
+		"prefix": "protected",
+		"scope": "ada",
+		"body": [
+			"protected ${1:Name} is",
+			"\t$0",
+			"private",
+			"\t",
+			"end ${1:Name};"
+		],
+		"description": "Protected declaration"
+	},
+	"Protected-Body": {
+		"prefix": "protected-body",
+		"scope": "ada",
+		"body": [
+			"protected body ${1:Name} is",
+			
+			"\t$0",
+			"end ${1:Name};"
+		],
+		"description": "Protected body definition"
+	},
+	"Protected-Type": {
+		"prefix": "protected-type",
+		"scope": "ada",
+		"body": [
+			"protected type ${1:Name} is",
+			"\t$0",
+			"private",
+			"\t",
+			"end ${1:Name};"
+		],
+		"description": "Protected type declaration"
+	},
+	"Record": {
+		"prefix": "record",
+		"scope": "ada",
+		"body": [
+			"type ${1:Name} is ${2|record,tagged record,abstract tagged record,limited record,tagged limited record,abstract tagged limited record|}",
+			"\t$0",
+			"end record;"
+		],
+		"description": "Record declaration"
+	},
+	"Return Do": {
+		"prefix": "return-do",
+		"scope": "ada",
+		"body": [
+			"return ${1:Result_Name} ${2|:,: aliased,: aliased constant,: constant|} ${3:Result_Type} do",
+			"\t$0",
+			"end return;"
+		],
+		"description": "Extended return statement"
+	},
+	"Select": {
+		"prefix": "select",
+		"scope": "ada",
+		"body": [
+			"select",
+			"\t$0",
+			"${1|or,else|}",
+			"\t",
+			"end select;"
+		],
+		"description": "Select statement"
+	},
+	"Select Asynchronous": {
+		"prefix": "select-async",
+		"scope": "ada",
+		"body": [
+			"select",
+			"\t$0",
+			"then abort",
+			"\t",
+			"end select;"
+		],
+		"description": "Asynchronous select"
+	},
+	"Select Timed": {
+		"prefix": "select-timed",
+		"scope": "ada",
+		"body": [
+			"select",
+			"\t$0",
+			"or",
+			"\tdelay ${1:Delay_Amount};",
+			"end select;"
+		],
+		"description": "Timed entry call"
+	},
+	"Task": {
+		"prefix": "task",
+		"scope": "ada",
+		"body": [
+			"task ${1:Name} is",
+			"\t$0",
+			"private",
+			"\t",
+			"end ${1:Name};"
+		],
+		"description": "Task declaration"
+	},
+	"Task Body": {
+		"prefix": "task-body",
+		"scope": "ada",
+		"body": [
+			"task body ${1:Name} is",
+			"\t$2",
+			"begin",
+			"\t$0",
+			"end ${1:Name};"
+		],
+		"description": "Task body"
+	},
+	"Task Type": {
+		"prefix": "task-type",
+		"scope": "ada",
+		"body": [
+			"task type ${1:Name} is",
+			"\t$0",
+			"private",
+			"\t",
+			"end ${1:Name};"
+		],
+		"description": "Task type declaration"
+	},
+	"Variant Record": {
+		"prefix": "varrecord",
+		"scope": "ada",
+		"body": [
+			"type ${1:Name}($2) is ${3|record,tagged record,abstract tagged record,limited record,tagged limited record,abstract tagged limited record|}",
+			"\t$0",
+			"\tcase ${4:Variable} is",
+			"\t\twhen ${5:Condition} =>",
+			"\t\t\tnull;",
+			"\t\twhen others =>",
+			"\t\t\tnull;",
+			"\tend case;",
+			"end record;"
+		],
+		"description": "Variant record declaration"
+	},
+	"While Loop": {
+		"prefix": "while",
+		"scope": "ada",
+		"body": [
+			"while ${1:Condition} loop",
+			"\t$0",
+			"end loop;"
+		],
+		"description": "While-loop statement"
+	}
+}
