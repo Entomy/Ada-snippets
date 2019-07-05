@@ -2,7 +2,7 @@
     "name": "ada-snippets",
     "displayName": "Ada-snippets",
     "description": "Provides snippets for Ada",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "Entomy",
     "author": "Entomy",
     "galleryBanner": {
@@ -11,18 +11,14 @@
     },
     "preview": true,
     "keywords": [
-      "ada",
-      "adb",
-      "ads",
-      "gpr"  
+        "ada",
+        "adb",
+        "ads",
+        "gpr"
     ],
     "license": "LICENSE",
-    "repository": {
-        
-    },
-    "bugs": {
-        
-    },
+    "repository": {},
+    "bugs": {},
     "engines": {
         "vscode": "^1.35.0"
     },
