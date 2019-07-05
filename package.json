@@ -17,8 +17,14 @@
         "gpr"
     ],
     "license": "LICENSE",
-    "repository": {},
-    "bugs": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Entomy/Ada-snippets"
+    },
+    "bugs": {
+        "url": "https://github.com/Entomy/Ada-snippets/issues",
+        "email": "p-kell@live.com"
+    },
     "engines": {
         "vscode": "^1.35.0"
     },
