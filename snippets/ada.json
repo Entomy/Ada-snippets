@@ -1,4 +1,14 @@
 {
+	"Accept": {
+		"prefix": "accept",
+		"scope": "ada",
+		"body": [
+			"accept ${1:Name} do",
+			"\t$0",
+			"end ${1:Name};"
+		],
+		"description": "Accept statement"
+	},
 	"Aspect": {
 		"prefix": "aspect",
 		"scope": "ada",
