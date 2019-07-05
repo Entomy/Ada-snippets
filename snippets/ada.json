@@ -84,7 +84,7 @@
 			"function ${1:Name} return ${2:Return_Type} is",
 			"\t$3",
 			"begin",
-			"\t0",
+			"\t$0",
 			"end ${1:Name};"
 		],
 		"description": "Function body"
