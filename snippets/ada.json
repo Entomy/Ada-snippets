@@ -41,6 +41,26 @@
 		],
 		"description": "Elsif statement"
 	},
+	"Entry Spec": {
+		"prefix": "entry-spec",
+		"scope": "ada",
+		"body": [
+			"entry ${1:Name};"
+		],
+		"description": "Entry specification"
+	},
+	"Entry Body": {
+		"prefix": "entry-body",
+		"scope": "ada",
+		"body": [
+			"entry ${1:Name} when ${2:Guard_Condition} is",
+			"\t$3",
+			"begin",
+			"\t$0",
+			"end ${1:Name};"
+		],
+		"descroption": "Entry body"
+	},
 	"Exit": {
 		"prefix": "exit",
 		"scope":"ada",
