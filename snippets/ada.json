@@ -69,7 +69,30 @@
 			"\t$0",
 			"end ${1:Name};"
 		],
-		"descroption": "Entry body"
+		"description": "Entry body"
+	},
+	"Enumeration": {
+		"prefix": "enumeration",
+		"scope": "ada",
+		"body": [
+			"type ${1:Name} is ($0);"
+		],
+		"description": "Enumeration type"
+	},
+	"Enumeration Flags": {
+		"prefix": "flags",
+		"scope": "ada",	
+		"body": [
+			"type ${1:Name} is ($0);",
+			"for ${1:Name} use (",
+			"\t);",
+			"",
+			"function \"not\" is new Generics.Discrete_Not(${1:Name});",
+			"function \"and\" is new Generics.Discrete_And(${1:Name});",
+			"function \"or\" is new Generics.Discrete_Or(${1:Name});",
+			"function \"xor\" is new Generics.Discrete_XOr(${1:Name});"
+		],
+		"description": "Enumeration flags type"
 	},
 	"Exit": {
 		"prefix": "exit",
