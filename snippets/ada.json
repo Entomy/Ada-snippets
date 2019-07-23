@@ -87,10 +87,10 @@
 			"for ${1:Name} use (",
 			"\t);",
 			"",
-			"function \"not\" is new Generics.Discrete_Not(${1:Name});",
-			"function \"and\" is new Generics.Discrete_And(${1:Name});",
-			"function \"or\" is new Generics.Discrete_Or(${1:Name});",
-			"function \"xor\" is new Generics.Discrete_XOr(${1:Name});"
+			"function \"not\" is new Generics.Discrete_Bitwise.Discrete_Not(${1:Name});",
+			"function \"and\" is new Generics.Discrete_Bitwise.Discrete_And(${1:Name});",
+			"function \"or\" is new Generics.Discrete_Bitwise.Discrete_Or(${1:Name});",
+			"function \"xor\" is new Generics.Discrete_Bitwise.Discrete_XOr(${1:Name});"
 		],
 		"description": "Enumeration flags type"
 	},
