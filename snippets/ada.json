@@ -9,6 +9,14 @@
 		],
 		"description": "Accept statement"
 	},
+	"Access": {
+		"prefix": "access",
+		"scope": "ada",
+		"body": [
+			"type ${1:Name} is ${2|access,access all,access constant|} of ${3:Some_Type};"
+		],
+		"description": "Access declaration"
+	},
 	"Array": {
 		"prefix": "array",
 		"scope": "ada",
