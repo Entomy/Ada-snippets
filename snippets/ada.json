@@ -9,6 +9,14 @@
 		],
 		"description": "Accept statement"
 	},
+	"Array": {
+		"prefix": "array",
+		"scope": "ada",
+		"body": [
+			"type ${1:Name} is array($2) of ${3:Element_Type};"
+		],
+		"description": "Array declaration"
+	},
 	"Aspect": {
 		"prefix": "aspect",
 		"scope": "ada",
